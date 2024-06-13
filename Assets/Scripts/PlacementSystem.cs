@@ -83,6 +83,7 @@ public class PlacementSystem : MonoBehaviour
         if (inputManager.IsPointerOverUI()) return;
 
         var mouseWorldPosition = inputManager.GetSelectedMapPosition();
+
         var gridCellPosition = grid.WorldToCell(mouseWorldPosition);
 
         buildingState.OnAction(gridCellPosition);
